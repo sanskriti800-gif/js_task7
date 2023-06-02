@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="container" style="width: 40%;border: 1px solid #000;">
+            <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
+                <label class="col-3">1st Number: </label>
+                <input type="text" class="col-6" id="first">
+            </div>
+            <div class="row">
+                <label class="col-3">2nd Number: </label>
+                <input type="text" class="col-6" id="second">
+            </div>
+            <div class="row">
+                <button class="task1" onclick="add()">Add</button>
+                <button class="task1" onclick="sub()">Subtract</button>
+                <button class="task1" onclick="mul()">Multiply</button>
+                <button class="task1" onclick="div()">Divide</button>
+            </div>
+            <div>
+                <p>The Result is:</p>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function add() {
+            var first = Number(document.getElementById("first").value);
+            var second = Number(document.getElementById("second").value);
+            document.getElementById("result").innerText = first + second
+        }
+        function sub() {
+            var first = Number(document.getElementById("first").value);
+            var second = Number(document.getElementById("second").value);
+            document.getElementById("result").innerText = first - second
+        }
+        function mul() {
+            var first = Number(document.getElementById("first").value);
+            var second = Number(document.getElementById("second").value);
+            document.getElementById("result").innerText = first * second
+        }
+        function div() {
+            var first = Number(document.getElementById("first").value);
+            var second = Number(document.getElementById("second").value);
+            document.getElementById("result").innerText = first / second
+        }
+    </script>
+</body>
+
+</html>
